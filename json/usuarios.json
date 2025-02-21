@@ -1,0 +1,40 @@
+[
+    {
+      "usuario": "Admin1",
+      "contraseña": "cristian",
+      "rol": "Administrador",
+      "nombre": "cristiana m"
+    },
+    {
+      "usuario": "Admin2",
+      "contraseña": "123",
+      "rol": "Administrador",
+      "nombre": "Briyit"
+    },
+    {
+      "usuario": "Admin3",
+      "contraseña": "briyit",
+      "rol": "Administrador",
+      "nombre": "cristian me"
+    },
+    {
+      "usuario": "Usuario1",
+      "contraseña": "bomberos",
+      "rol": "Usuario",
+      "nombre": "cristian m"
+    },
+    {
+      "usuario": "Usuario2",
+      "contraseña": "policia",
+      "rol": "Usuario",
+      "nombre": "cristian m"
+    },
+    {
+      "usuario": "Usuario3",
+      "contraseña": "armada",
+      "rol": "Usuario",
+      "nombre": "cristian m"
+    }
+    
+  ]
+  
