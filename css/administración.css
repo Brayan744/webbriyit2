@@ -1,0 +1,108 @@
+header {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 10px 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+    height: 100px; /* Ajusta el tamaño del logo */
+    width: 100px;
+    margin-right: 15px;
+}
+  
+header h2 {
+    color: #1B3C34;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que la página ocupe toda la pantalla */
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sensor {
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+th {
+    background-color: #ddd;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+}
+
+h2 {
+    color: #1B3C34;
+}
+
+table {
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 0;
+    height: 300px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Redondea toda la tabla */
+    overflow: hidden;
+}
+
+/* Redondear las esquinas de la primera y última celda de cada fila */
+th:first-child, td:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+th:last-child, td:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    background-color: white;
+}
+
+.users {
+    margin: auto;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #1B3C34; /* Un verde oscuro */
+    display: flex;
+    justify-content: space-between; /* Separa los elementos */
+    align-items: center; /* Alinea verticalmente */
+    color: white;
+    padding: 15px 30px;
+    font-size: 14px;
+}

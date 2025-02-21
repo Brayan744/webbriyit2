@@ -1,0 +1,51 @@
+h1, h2, h3 {
+    color: #1B3C34;
+}
+header img {
+    height: 100px; /* Ajusta el tamaño del logo */
+    width: 100px;
+    margin-right: 15px; /* Espacio entre la imagen y el texto */
+}
+
+header h2 {
+    color: #1B3C34;
+    font-size: 24px; /* Ajusta el tamaño del texto */
+    font-weight: bold;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que la página ocupe toda la pantalla */
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    gap: 20px;
+}
+
+.izquierda {
+    flex: 1;
+    padding: 20px;
+}
+
+.derecha {
+    flex: 1;
+    padding: 20px;
+}
+
+footer {
+    background-color: #1B3C34; /* Un verde oscuro */
+    display: flex;
+    justify-content: space-between; /* Separa los elementos */
+    align-items: center; /* Alinea verticalmente */
+    color: white;
+    padding: 15px 30px;
+    font-size: 14px;
+}
+
+p {
+    text-align: justify;
+}

@@ -1,0 +1,74 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinea los elementos a la izquierda */
+    background: white;
+    padding: 10px 20px; /* Ajusta el padding para que haya más espacio */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+    height: 100px; /* Ajusta el tamaño del logo */
+    width: 100px;
+    margin-right: 15px; /* Espacio entre la imagen y el texto */
+}
+
+header h2 {
+    color: #1B3C34;
+    font-size: 24px; /* Ajusta el tamaño del texto */
+    font-weight: bold;
+}
+
+header h2 {
+    color: #1B3C34;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que la página ocupe toda la pantalla */
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    gap: 20px;
+}
+
+h2, h3{
+    color: #1B3C34;
+}
+
+.izquierda {
+    flex: 1;
+    padding: 20px;
+}
+
+.derecha {
+    flex: 1;
+    padding: 20px;
+}
+
+iframe {
+    width: 100%;
+    height: 560px;
+    border-radius: 10px;
+    border: none;
+}
+
+footer {
+    background-color: #1B3C34; /* Un verde oscuro */
+    display: flex;
+    justify-content: space-between; /* Separa los elementos */
+    align-items: center; /* Alinea verticalmente */
+    color: white;
+    padding: 15px 30px;
+    font-size: 14px;
+}
+
+p {
+    text-align: justify;
+}

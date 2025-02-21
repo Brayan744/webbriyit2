@@ -1,0 +1,37 @@
+body {
+    font-family: "Poppins", serif;
+    font-size: 14px;
+}
+
+ul.menu {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1B3C34;
+}
+
+.menu li {
+    float: left;
+}
+
+.menu li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    border-radius: 10px;
+    background-color: #D95D39;
+}
+
