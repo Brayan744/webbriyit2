@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto y Soporte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/menustyles.css">
+    <link rel="stylesheet" href="../css/contactysopor.css">
+</head>
+<body onload="verificarSesion()">
+    <script>
+        function verificarSesion() {
+            let usuario = localStorage.getItem("usuario");
+
+            // Si no hay usuario, redirigir al login
+            if (!usuario) {
+                console.log("No hay usuario, redirigiendo al login...");
+                window.location.href = "../index.html";  
+            }
+        }
+    </script>
+
+<body>
+<header>
+    <img src="../img/wildfire_monitoring_logo (3).png" alt="">
+    <h2>Sistema de Monitoreo Ambiental de Incendios Forestales</h2>
+</header>
+
+
+  
+    
+  
+    <ul class="menu">
+        <li><a href="iniciouser.html">Inicio</a></li>
+        <li><a href="alertasynot.html">Alertas y Notificaciones</a></li>
+        <li><a href="informacion.html">Información</a></li>
+        <li><a href="#">Contacto y Soporte</a></li>
+        <li><a href="administración.html">Panel de Administración</a></li>
+        <li><a href="#" onclick="cerrarSesion(event)">Cerrar Sesión</a></li>
+    </ul>
+    
+    <div class="contenedor-imagen">
+        <div class="forest">
+            <img src="../img/contactocab.jpg" alt="">
+            <div class="texto-superpuesto">Contáctanos</div>
+         </div>
+    </div>
+        
+        
+        
+    <div>
+        <form class="contact-form">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+    
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" required>
+    
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" name="correo" required>
+    
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <div class="apoyo">
+        <p>Nuestro proyecto busca generar un impacto positivo en la comunidad, pero para hacerlo posible necesitamos tu apoyo. Con tu contribución económica, podremos continuar desarrollando soluciones innovadoras y sostenibles que beneficien a muchas personas.</p>
+        <p>Cada donación, sin importar el monto, nos ayuda a mejorar nuestras herramientas, ampliar nuestro alcance y seguir trabajando en nuestra misión.</p>
+        <p>Si deseas contribuir, contáctanos y juntos construiremos un futuro mejor. <strong>¡Gracias por ser parte del cambio!</strong></p>
+    </div>
+
+    <div class="qr">
+        <img src="../img/Imagen de WhatsApp 2025-02-12 a las 20.24.00_eb0445dc.jpg" alt="" width="300" height="auto">
+
+    </div>
+    
+    
+    
+    <footer>
+        <p>&copy; 2025 SMAIF - Todos los derechos reservados. Contacto: <a href="SmaifWeb@gmail.com">SmaifWeb@gmail.com</a></p>
+    </footer>
+    <script src="../js/contactanos.js"></script>
+    <script src="../js/administracion.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+</html>     

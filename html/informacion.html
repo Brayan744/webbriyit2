@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inicio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/menustyles.css">
+        <link rel="stylesheet" href="../css/inicio.css">
+    </head>
+    <body onload="verificarSesion()">
+        <script>
+            function verificarSesion() {
+                let usuario = localStorage.getItem("usuario");
+    
+                // Si no hay usuario, redirigir al login
+                if (!usuario) {
+                    console.log("No hay usuario, redirigiendo al login...");
+                    window.location.href = "../index.html";  
+                }
+            }
+        </script>
+
+    <body>
+    
+        <header>
+            <img src="../img/wildfire_monitoring_logo (3).png" alt="">
+            <h2>Sistema de Monitoreo Ambiental de Incendios Forestales</h2>
+        </header>
+    
+
+    <ul class=" menu">
+        <li><a href="iniciouser.html">Inicio</a></li>
+        <li><a href="alertasynot.html">Alertas y Notificaiones</a></li>
+        <li><a href="#">Información</a></li>
+        <li><a href="contactoysopor.html">Contacto y Soporte</a></li>
+        <li><a href="administración.html">Panel de Administración</a></li>
+        <li><a href="#" onclick="cerrarSesion(event)">Cerrar Sesión</a></li>
+    </ul>
+    <main>
+        <p>Bienvenido, <span id="nombreUsuario"></span></p>
+
+        <section class="izquierda">
+            <h1>Incendios Forestales</h1>
+
+            <h2>1. ¿Qué son los incendios forestales?</h2>
+            <p>Los incendios forestales son fuegos que se propagan de manera incontrolada en áreas de vegetación natural, como bosques, matorrales y pastizales. Pueden originarse por causas naturales (por ejemplo, descargas eléctricas durante tormentas) o anthropogénicas (acciones humanas como fogatas mal apagadas, quema de residuos o actos intencionales). Estos incendios, en muchos casos, se inician de forma pequeña, pero pueden escalar rápidamente debido a factores ambientales y de propagación.</p>
+
+            <h2>2. Impacto de los incendios forestales</h2>
+            <h3>Impacto Ambiental</h3>
+            <ul>
+                <li><strong>Pérdida de Biodiversidad:</strong> Los incendios destruyen hábitats, afectando tanto a flora como a fauna, y pueden llevar a la extinción de especies endémicas o en peligro de extinción.</li>
+                <li><strong>Alteración del Ciclo del Agua y Erosión del Suelo:</strong> La pérdida de vegetación reduce la capacidad del suelo para retener agua, lo que aumenta la erosión y dificulta la recuperación del ecosistema.</li>
+                <li><strong>Emisión de Gases de Efecto Invernadero:</strong> La quema de grandes extensiones de vegetación libera grandes cantidades de dióxido de carbono (CO₂) y otros contaminantes, contribuyendo al cambio climático.</li>
+                <li><strong>Degradación del Suelo:</strong> La ceniza y los residuos de la combustión pueden alterar la composición química del suelo, afectando su fertilidad y la capacidad de regeneración de la vegetación.</li>
+            </ul>
+            <h3>Impacto Socioeconómico</h3>
+            <ul>
+                <li><strong>Daños en Infraestructuras y Propiedades:</strong> Los incendios pueden destruir viviendas, carreteras y otros bienes, generando pérdidas económicas significativas.</li>
+                <li><strong>Costos en la Gestión de Emergencias:</strong> La lucha contra incendios y la rehabilitación posterior requieren grandes inversiones de recursos económicos y humanos.</li>
+                <li><strong>Impacto en la Salud Pública:</strong> La inhalación de humo y partículas contaminantes puede provocar problemas respiratorios y cardiovasculares, afectando a comunidades enteras, especialmente a personas vulnerables como niños y ancianos.</li>
+                <li><strong>Desplazamiento y Pérdida de Vidas:</strong> En situaciones de emergencia, las comunidades pueden verse obligadas a evacuar, generando crisis humanitarias y pérdidas irreparables en términos de vidas y patrimonio cultural.</li>
+            </ul>
+    </section>
+    <section class="derecha">
+
+        <h2>3. Consejos de Prevención</h2>
+        <p>La prevención es clave para minimizar el riesgo y el impacto de los incendios forestales. Algunos consejos y prácticas recomendadas son:</p>
+        <ul>
+            <li><strong>Educación y Concienciación:</strong>
+                <ul>
+                    <li>Realizar campañas de sensibilización en comunidades cercanas a zonas forestales.</li>
+                    <li>Informar sobre el manejo seguro del fuego en actividades recreativas o laborales.</li>
+                </ul>
+            </li>
+            <li><strong>Buenas Prácticas en el Uso del Fuego:</strong>
+                <ul>
+                    <li>Realizar fogatas solo en áreas designadas y controladas.</li>
+                    <li>Asegurarse de que las fogatas estén completamente apagadas antes de abandonar el área.</li>
+                </ul>
+
+            </li>
+            <li><strong>Gestión y Mantenimiento de la Vegetación:</strong>
+                <ul>
+                    <li>Implementar planes de limpieza y desbroce en áreas de alto riesgo.</li>
+                    <li>Realizar quemas controladas (bajo supervisión y en condiciones seguras) para eliminar material combustible en exceso.</li>
+                </ul>
+            </li>
+            <li><strong>Monitoreo y Detección Temprana:</strong>
+                <ul>
+                    <li>Instalar sistemas de sensores para medir variables ambientales (temperatura, humedad, gases inflamables, entre otros) que puedan indicar condiciones propicias para un incendio.</li>
+                    <li>Utilizar tecnología IoT y plataformas de análisis en tiempo real para detectar anomalías y activar alertas de emergencia.</li>
+                </ul>
+            </li>
+            <li><strong>Normativas y Legislación:</strong>
+                <ul>
+                    <li>Establecer y hacer cumplir regulaciones que limiten actividades de riesgo en zonas forestales, especialmente durante temporadas secas.</li>
+                </ul>
+            </li>
+        </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SMAIF - Todos los derechos reservados. Contacto: <a href="SmaifWeb@gmail.com">SmaifWeb@gmail.com</a></p>
+    </footer>
+    <script src="../js/index.js"></script>
+
+</body>
+</html>

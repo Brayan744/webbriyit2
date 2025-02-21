@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administrador</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/menustyles.css">
+    <link rel="stylesheet" href="../css/administración.css">
+</head>
+
+<body onload="verificarSesion()">
+    <script>
+        function verificarSesion() {
+            let usuario = localStorage.getItem("usuario");
+
+            // Si no hay usuario, redirigir al login
+            if (!usuario) {
+                console.log("No hay usuario, redirigiendo al login...");
+                window.location.href = "../index.html";  
+            }
+        }
+    </script>
+
+<body>
+    <header>
+        <img src="../img/wildfire_monitoring_logo (3).png" alt="">
+        <h2>Sistema de Monitoreo Ambiental de Incendios Forestales</h2>
+    </header>
+
+    <ul class="menu">
+        <li><a href="iniciouser.html">Inicio</a></li>
+        <li><a href="alertasynot.html">Alertas y Notificaciones</a></li>
+        <li><a href="informacion.html">Información</a></li>
+        <li><a href="contactoysopor.html">Contacto y Soporte</a></li>
+        <li><a href="#">Panel de Administración</a></li>
+        <li><a href="#" onclick="cerrarSesion(event)">Cerrar Sesión</a></li>
+    </ul>
+    
+        <h2>Información de los Sensores</h2>
+        <div class="contenedor">
+            <div class="cuadro">
+                <h3>Sensor de Temperatura y Humedad</h3>
+                <img src="../img/TyH.jpg" alt="Sensor de Temperatura y Humedad">
+                <table border="1">
+                    <tr>
+                        <td><b>Temperatura</b></td>
+                        <td>35°C</td>
+                    </tr>
+                    <tr>
+                        <td><b>Humedad Relativa</b></td>
+                        <td>73%</td>
+                    </tr>
+                    <tr>
+                        <td><b>Estado</b></td>
+                        <td>Activo</td>
+                    </tr>
+                    <tr>
+                        <td><b>Ubicación</b></td>
+                        <td>Zona Verde</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="cuadro">
+                <h3>Sensor de Monoxido de Carbono (CO)</h3>
+                <img src="../img/mq-7.jpg" alt="Sensor de Temperatura y Humedad">
+                <table border="1">
+                    <tr>
+                        <td><b>Nivel de (CO)</b></td>
+                        <td>15.6 ppm</td>
+                    </tr>
+                    <tr>
+                        <td><b>Estado</b></td>
+                        <td>Activo</td>
+                    </tr>
+                    <tr>
+                        <td><b>Ubicación</b></td>
+                        <td>Zona Verde</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <h1>Usuarios Registrados</h1>
+        <table class="users">
+          <thead>
+            <tr>
+              <th>Usuario</th>
+              <th>Contraseña</th>
+              <th>Rol</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="tbodyUsuarios">
+            <!-- Aquí se inyectan dinámicamente las filas de usuarios -->
+          </tbody>
+        </table>
+        
+        <!-- Opcional: Formulario para editar/agregar usuarios -->
+        <h2>Editar/Agregar Usuario</h2>
+        <form id="formUsuario">
+          <input type="text" id="usuario" placeholder="Usuario" required>
+          <input type="text" id="contraseña" placeholder="Contraseña" required>
+          <input type="text" id="rol" placeholder="Rol" required>
+          <button type="submit">Guardar</button>
+        </form>
+
+
+        <script src="../js/administracion.js"></script>
+        <script src="../js/index.js"></script>
+</body>
+      
+
+  
+    <footer>
+        <p>&copy; 2025 SMAIF - Todos los derechos reservados. Contacto: <a href="SmaifWeb@gmail.com">SmaifWeb@gmail.com</a></p>
+    </footer>
+    
+
+</html>
+

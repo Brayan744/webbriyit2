@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inicio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/menustyles.css">
+        <link rel="stylesheet" href="../css/inicio.css">
+    </head>
+    <body onload="verificarSesion()">
+        <script>
+            function verificarSesion() {
+                let usuario = localStorage.getItem("usuario");
+    
+                // Si no hay usuario, redirigir al login
+                if (!usuario) {
+                    console.log("No hay usuario, redirigiendo al login...");
+                    window.location.href = "../index.html";  
+                }
+            }
+        </script>
+
+    <body>
+    
+        <header>
+            <img src="../img/wildfire_monitoring_logo (3).png" alt="">
+            <h2>Sistema de Monitoreo Ambiental de Incendios Forestales</h2>
+        </header>
+    <ul class="menu">
+        <li><a href="iniciouser.html">Inicio</a></li>
+        <li><a href="#">Alertas y Notificaiones</a></li>
+        <li><a href="informacion.html">Información</a></li>
+        <li><a href="contactoysopor.html">Contacto y Soporte</a></li>
+        <li><a href="administración.html">Panel de Administración</a></li>
+        <li><a href="#" onclick="cerrarSesion(event)">Cerrar Sesión</a></li>
+    </ul>
+
+    <main>
+        <p>Bienvenido, <span id="nombreUsuario"></span></p>
+
+        <section class="derecha">
+            <h2>Registro de Alertas</h2>
+            
+        
+            <p>
+                Este sistema opera en tiempo real, procesando datos provenientes de sensores que miden temperatura, humedad, presencia de gases inflamables como el monóxido de carbono y otros factores determinantes. Al detectar valores que superan umbrales de riesgo predefinidos, el sistema genera alertas automáticas, clasificadas según su nivel de criticidad.
+
+                Además, SMAIF mantiene un historial de alertas pasadas, lo que permite un análisis detallado de patrones de riesgo y facilita la toma de decisiones basadas en datos históricos. Esta funcionalidad no solo optimiza la respuesta ante emergencias, sino que también contribuye a la planificación estratégica para la prevención de incendios en el futuro.
+            </p>
+            <h3>Alertas Activas</h3>
+            <table border="1">
+                <tr>
+                    <th>ID</th>
+                    <th>Fecha</th>
+                    <th>Nivel de Riesgo</th>
+                    <th>Ubicación</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+                <tr>
+                    <td>001</td>
+                    <td>2025-02-06</td>
+                    <td>🔴 Alto</td>
+                    <td>Zona Norte</td>
+                    <td>Activa</td>
+                    <td>🔔 Notificar</td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>2025-02-05</td>
+                    <td>🟡 Medio</td>
+                    <td>Bosque Verde</td>
+                    <td>Activa</td>
+                    <td>📍 Revisar</td>
+                </tr>
+                <tr>
+                    <td>003</td>
+                    <td>2025-02-04</td>
+                    <td>🔴 Alto</td>
+                    <td>Selva Azul</td>
+                    <td>Activa</td>
+                    <td>🔔 Notificar</td>
+                </tr>
+                <tr>
+                    <td>004</td>
+                    <td>2025-02-03</td>
+                    <td>🟢 Bajo</td>
+                    <td>Llanura Roja</td>
+                    <td>En Observación</td>
+                    <td>🔄 Actualizar</td>
+                </tr>
+            </table>
+    
+            <h3>Alertas Pasadas</h3>
+            <table border="1">
+                <tr>
+                    <th>ID</th>
+                    <th>Fecha</th>
+                    <th>Nivel de Riesgo</th>
+                    <th>Ubicación</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+                <tr>
+                    <td>101</td>
+                    <td>2025-01-30</td>
+                    <td>🔴 Alto</td>
+                    <td>Sierra Alta</td>
+                    <td>Controlada</td>
+                    <td>🚒 Brigada enviada</td>
+                </tr>
+                <tr>
+                    <td>102</td>
+                    <td>2025-01-28</td>
+                    <td>🟡 Medio</td>
+                    <td>Lago Verde</td>
+                    <td>Resuelta</td>
+                    <td>🌧️ Lluvia extinguió fuego</td>
+                </tr>
+                <tr>
+                    <td>103</td>
+                    <td>2025-01-25</td>
+                    <td>🔴 Alto</td>
+                    <td>Cañón del Sol</td>
+                    <td>Controlada</td>
+                    <td>🚁 Helicóptero con agua</td>
+                </tr>
+                <tr>
+                    <td>004</td>
+                    <td>2025-02-03</td>
+                    <td>🟢 Bajo</td>
+                    <td>Llanura Roja</td>
+                    <td>En Observación</td>
+                    <td>🔄 Actualizar</td>
+                </tr>
+            </table>
+
+            <p>
+                El uso de un sistema de alerta eficiente permite una respuesta rápida ante emergencias, optimiza los recursos de los equipos de rescate y reduce significativamente el impacto ambiental y social de los incendios forestales. Además, al contar con un registro histórico de notificaciones, se pueden analizar patrones y mejorar las estrategias de prevención.
+
+                Con estas funcionalidades, SMAIF se convierte en una herramienta clave para la gestión proactiva del riesgo de incendios, protegiendo tanto el medio ambiente como a las comunidades vulnerables.
+            </p>
+        </section>
+
+        <section class="izquierda">
+            <h2>Sistemas de Clasificación de Riesgos</h2>
+            <p>El sistema de clasificación de riesgos en SMAIF permite evaluar el nivel de amenaza de incendio en tiempo real, basándose en el análisis de datos ambientales recolectados por sensores.</p>
+
+            <h3>Categorías de Riesgo</h3>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Nivel de Riesgo</th>
+                        <th>Descripción</th>
+                        <th>condiciones Ambientales</th>
+                        <th>Acciones Recomendadas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bajo 🟢</td>
+                        <td>No hay peligro inmediato.</td>
+                        <td>Temp: Baja/Media Humedad: Alta Gases inflamables: Ausentes Viento: Débil</td>
+                        <td>Monitoreo Unitario</td>
+                    </tr>
+                    <tr>
+                        <td>Medio 🟡</td>
+                        <td>Posibles condiciones de incendio. Precaución recomendada.</td>
+                        <td>Temp: Media/Alta Humedad: Media Gases inflamables: Baja concentración Viento: Moderado</td>
+                        <td>Alerta preventiva y monitoreo constante</td>
+                    </tr>
+                    <tr>
+                        <td>Alto 🟠</td>
+                        <td>Condiciones propicias para un incendio. Precaución extrema.</td>
+                        <td>Temp: Media/Alta Humedad: Media Gases inflamables: Baja concentración Viento: ModeradoTemp: Alta Humedad: Baja Gases inflamables: Presentes en niveles preocupantes Viento: Fuerte</td>
+                        <td>Notificación a autoridades, aumento de vigilancia</td>
+                    </tr>
+                    <tr>
+                        <td>Crítico 🔴</td>
+                        <td>Peligro inminente de incendio. Respuesta inmediata requerida.</td>
+                        <td>Temp: Muy alta Humedad: Muy baja Gases inflamables: Alta concentración Viento: Intenso</td>
+                        <td>Activación de protocolos de emergencia y brigadas de respuesta</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Cálculo del Nivel de Riesgo</h2>
+
+            <p>
+                Para determinar el nivel de riesgo, el sistema utiliza un algoritmo de puntuación basado en los valores detectados por los sensores. Se asignan puntajes a cada variable y el riesgo se clasifica según un umbral total.
+            </p>
+
+            <h3>Ejemplo de Puntuación por Variable</h3>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Variable</th>
+                        <th>Bajo (1 punto)</th>
+                        <th>Moderado (2 puntos)</th>
+                        <th>Alto (3 puntos)</th>
+                        <th>Crítico (4 puntos)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>Temperatura</b></td>
+                        <td>&lt; 25°</td>
+                        <td> 25°C - 35°C</td>
+                        <td>35°C - 40°C</td>
+                        <td>&gt; 40°C</td>
+                    </tr>
+                    <tr>
+                        <td><b>Humedad</b></td>
+                        <td>&gt; 60%</td>
+                        <td>40% - 60%</td>
+                        <td>20% - 40%</td>
+                        <td>&lt; 20%</td>
+                    </tr>
+                    <tr>
+                        <td><b>Gases inflamables</b></td>
+                        <td>No detectados</td>
+                        <td>Baja concentración</td>
+                        <td>Moderada concentración</td>
+                        <td>Alta concentración</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Nivel de Riesgo Según Puntuación</h3>
+            <ul>
+                <li><strong>1 - 4 puntos →</strong> Bajo 🟢</li>
+                <li><strong>5 - 7 puntos →</strong> Medio 🟡</li>
+                <li><strong>8 - 10 puntos →</strong> Alto 🟠</li>
+                <li><strong>11 - 12 puntos →</strong> Crítico 🔴</li>
+            </ul>
+        </section>
+        
+    </main>
+    <div class="video-container">
+    <iframe width="300" height="315" src="https://www.youtube.com/embed/Yr2bSKzmcYA?si=V8lLHOLja5YnotMv&amp;start=7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+    
+    <script src="../js/alertas.js"></script>
+    
+    <footer>
+        <p>&copy; 2025 SMAIF - Todos los derechos reservados. Contacto: <a href="SmaifWeb@gmail.com">SmaifWeb@gmail.com</a></p>
+    </footer>
+
+    <script src="../js/index.js"></script>
+
+</body>
+</html>

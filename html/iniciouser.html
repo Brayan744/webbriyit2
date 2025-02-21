@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/menustyles.css">
+    <link rel="stylesheet" href="../css/inicio.css">
+</head>
+
+<body onload="verificarSesion()">
+    <script>
+        function verificarSesion() {
+            let usuario = localStorage.getItem("usuario");
+
+            // Si no hay usuario, redirigir al login
+            if (!usuario) {
+                console.log("No hay usuario, redirigiendo al login...");
+                window.location.href = "../index.html";  
+            }
+        }
+    </script>
+
+
+<body>
+
+    <header>
+        <img src="../img/wildfire_monitoring_logo (3).png" alt="">
+        <h2>Sistema de Monitoreo Ambiental de Incendios Forestales</h2>
+    </header>
+
+    <ul class="menu">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="alertasynot.html">Alertas y Notificaciones</a></li>
+        <li><a href="informacion.html">Información</a></li>
+        <li><a href="contactoysopor.html">Contacto y Soporte</a></li>
+        <li><a href="administración.html">Panel de Administración</a></li>
+        <li><a href="#" onclick="cerrarSesion(event)">Cerrar Sesión</a></li>
+
+
+
+
+
+
+    </ul>
+    
+    <main>
+        <p><strong>Bienvenido,</strong> <span id="nombreUsuario"></span></p>
+
+
+
+
+
+
+        <section class="izquierda">
+           
+    
+            <h2>¿Qué es SMAIF?</h2>
+    
+            <P>
+                SMAIF, siglas de Sistema de Monitoreo Ambiental de Incendios Forestales, es un proyecto universitario enfocado en la prevención y gestión proactiva de incendios forestales mediante la integración de tecnologías emergentes como Arduino y Internet of Things (IoT). Su propósito principal es detectar de manera temprana condiciones ambientales que puedan favorecer la propagación del fuego, permitiendo una respuesta rápida y eficiente para mitigar sus impactos.
+            </P>
+        
+            <h2>Funcionamiento del Sistema</h2>
+        
+            <p>
+                SMAIF opera a través de una red de sensores conectados a placas Arduino, los cuales recopilan en tiempo real datos ambientales clave, tales como:
+            </p>
+        
+        
+            <ul>
+                <li><b>Temperatura:</b> Para identificar aumentos anómalos que indiquen posibles riesgos de incendio.</li>
+                <li><b>Humedad:</b> Para identificar aumentos anómalos que indiquen posibles riesgos de incendio.</li>
+                <li><b>Monóxido de carbono (CO):</b> Para identificar la presencia de este gas tóxico, que puede ser un indicativo de combustión incompleta en incendios incipientes.</li>
+            </ul>
+            
+            <p>
+                Estos datos son transmitidos a través de redes IoT hacia una plataforma en la nube, donde son analizados por algoritmos avanzados que buscan anomalías y patrones de riesgo. Cuando se detecta una condición potencialmente peligrosa, el sistema emite alertas automáticas a las autoridades o equipos de respuesta para que actúen de inmediato y eviten la propagación del incendio.
+            </p>
+        
+            <h2>Objetivos y Propositos del SMAIF</h2>
+        
+            <P>
+                El desarrollo de SMAIF responde a la creciente amenaza que representan los incendios forestales, exacerbados por el cambio climático y la intervención humana. Su propósito se puede desglosar en los siguientes puntos clave:
+            </P>
+        
+            <ol class="lista">
+                <li>
+                    <h3>Monitoreo Continuo y en Tiempo Real</h3>
+                    <ul>
+                        <li>Proporcionar una supervisión constante de variables ambientales críticas en zonas forestales de alto riesgo.</li>
+                        <li>Utilizar sensores conectados en red para recopilar y transmitir datos sin interrupción.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Detección Temprana de Anomalías</h3>
+                    <ul>
+                        <li>Identificar de forma inmediata cualquier variación que pueda sugerir el inicio de un incendio.</li>
+                        <li>Emitir alertas automáticas en caso de detectar condiciones de riesgo.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Optimización de las Respuesta ante Emergencias</h3>
+                    <ul>
+                        <li>Brindar información precisa y oportuna a equipos de emergencia.</li>
+                        <li>Facilitar la toma de decisiones estratégicas para una respuesta rápida y efectiva.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Contribución a la Sostenibilidad Ambiental</h3>
+                    <ul>
+                        <li>Ayudar en la reducción del impacto ambiental y social de los incendios.</li>
+                        <li>Proteger la biodiversidad y los recursos naturales mediante la prevención.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Fomento de la Innovación y la Investigación</h3>
+                    <ul>
+                        <li>Integrar tecnologías de hardware y comunicación en la mitigación de riesgos ambientales.</li>
+                        <li>Servir como base para futuros desarrollos tecnológicos en la gestión de desastres naturales.</li>
+                    </ul>
+                </li>
+            </ol>
+        
+            <p>
+                SMAIF es un sistema que combina tecnología y sostenibilidad para abordar un problema ambiental crítico. Su implementación no solo ayuda a detectar incendios de manera temprana, sino que también contribuye a mejorar la capacidad de respuesta y minimizar los daños. Al integrar sensores, redes IoT y procesamiento en la nube, este proyecto universitario representa un avance significativo en la protección de los ecosistemas frente a los incendios forestales.
+            </p>
+        </section>
+
+        <section class="derecha">
+            <h2>Áreas Verdes y Relieve en Colombia</h2>
+            <p>Colombia es uno de los países más biodiversos del mundo y posee una gran riqueza en áreas naturales protegidas, selvas, bosques y parques nacionales. Estas zonas verdes juegan un papel fundamental en la conservación del medio ambiente y el equilibrio ecológico.</p>
+
+            <h2>Datos Clave sobre las Áreas Verdes en Colombia</h2>
+
+            <ol class="lista">
+                <li>
+                    <h3>Cobertura de Bosques y Selvas</h3>
+                    <ul>
+                        <li> Aproximadamente 59% del territorio colombiano está cubierto de bosques y selvas.</li>
+                        <li> La Amazonía colombiana representa la mayor extensión de bosque tropical del país.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Áreas Protegidas</h3>
+                    <ul>
+                        <li> Colombia cuenta con 59 Parques Nacionales Naturales, que suman más de 14% del territorio nacional.</li>
+                        <li> Existen más de 1,200 reservas naturales entre privadas y comunitarias.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Importancia de las Áreas Protegidas</h3>
+                    <ul>
+                        <li> Son el hábitat de más de 10% de la biodiversidad mundial.</li>
+                        <li>  Protegen fuentes de agua y ayudan a reducir el impacto del cambio climático.</li>
+                        <li> Protegen fuentes de agua y ayudan a reducir el impacto del cambio climático.</li>
+                    </ul>
+                </li>
+            </ol>
+            <p>Las áreas verdes en Colombia no solo son esenciales para el medio ambiente, sino también para el bienestar humano. Es crucial proteger estos espacios para garantizar un futuro sostenible. Aquí debajo, podras ver un mapa para explorar y ver un poco más de la geografía de Colombia:</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8135145.403943961!2d-77.79681135514903!3d5.380493488072972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e15a43aae1594a3%3A0x9a0d9a04eff2a340!2sColombia!5e0!3m2!1ses!2sco!4v1739400284770!5m2!1ses!2sco" width="600" height=""  width = 100% style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SMAIF - Todos los derechos reservados. Contacto: <a href="SmaifWeb@gmail.com">SmaifWeb@gmail.com</a></p>
+    </footer>
+    <script src="../js/index.js"></script>
+
+    </body>
+    </html>
+    
+</body>
+</html>
